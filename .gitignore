@@ -7,6 +7,8 @@
 *.pdb
 *.vs
 *.VC.db
+Debug/
+Release/
 build/bin/
 build/*.log
 build/msvc15/*.log
