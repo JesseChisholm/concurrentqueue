@@ -35,6 +35,7 @@ void init_PendingMessage(PendingMessage& pm, std::size_t force_id /*= (size_t)~0
 {
   pm.id = (force_id == (size_t)~0) ? next_pm_id.fetch_add(1) : force_id;
   //fprintf(stdout, "debug: PendingMessage.id = %u\n", pm.id);
+  //pm.queuedTime = moodycamel::getSystemTime();
   pm.packageName = "packageName";
   pm.messageName = "messageName";
   pm.envelope = std::make_shared<Envelope>();
