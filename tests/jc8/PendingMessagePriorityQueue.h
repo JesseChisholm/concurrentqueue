@@ -6,8 +6,9 @@ using namespace moodycamel;
 #include <atomic>
 
 /// <summary>
-/// A class that simulates a priority queue,
-/// based on <see cref="PendingMessagePriority"/>. 
+/// A class that simulates a priority queue.
+/// It is intended that there are many producers and one consumer.
+/// But this class has been tested with many consumer threads.
 /// </summary>
 class PendingMessagePriorityQueue
 {
@@ -33,7 +34,7 @@ public:
   }
   ~PendingMessagePriorityQueue()
   {
-    // TODO: if (count() > 0) LOG("Lost %u items in descructor.", count());
+    // TODO: if (count() > 0) LOG("Lost %u items in destructor.", count());
   }
 
 public:
@@ -137,6 +138,9 @@ public:
   /// The return value is <c>false</c> if the queue is empty at the moment.
   /// The return value is <c>true</c> if <paramref name="pm"/> has been popped from the queue.
   /// </returns>
+  /// <remarks>
+  /// Messages of a higher priority are popped in favor of messages at a lower priority.
+  /// </remarks>
   bool try_dequeue(PendingMessagePtr& pm)
   {
     if (count() == 0)
@@ -155,6 +159,18 @@ public:
     }
     return false;
   }
+  /// <summary>
+  /// Try and pop some items from the queue.
+  /// Higher priority are popped before lower priority.
+  /// </summary>
+  /// <param name="items"> The starts of an array of <see cref="PendingMessagePtr"/> to be popped into from the queue. </param>
+  /// <param name="max_items"> The maximum number of <see cref="PendingMessagePtr"/> there is room for in <paramref name="items"/>. </param>
+  /// <returns>
+  /// The return value is the number of items actually popped from the queue.
+  /// </returns>
+  /// <remarks>
+  /// Messages of a higher priority are popped in favor of messages at a lower priority.
+  /// </remarks>
   size_t try_dequeue_bulk(PendingMessagePtr* items, size_t max_items)
   {
     if (count() == 0)
