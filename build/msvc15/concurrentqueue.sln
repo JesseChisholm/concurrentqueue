@@ -23,6 +23,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "jc6", "..\..\tests\jc6\jc6.
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "jc7", "..\..\tests\jc7\jc7.vcxproj", "{7E4A0C3B-BCA0-49FB-BB42-AF8BF64D156A}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "jc8", "..\..\tests\jc8\jc8.vcxproj", "{5100172E-1119-4B4E-A7F5-EAF77A364778}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -111,6 +113,14 @@ Global
 		{7E4A0C3B-BCA0-49FB-BB42-AF8BF64D156A}.Release|Win32.Build.0 = Release|Win32
 		{7E4A0C3B-BCA0-49FB-BB42-AF8BF64D156A}.Release|x64.ActiveCfg = Release|x64
 		{7E4A0C3B-BCA0-49FB-BB42-AF8BF64D156A}.Release|x64.Build.0 = Release|x64
+		{5100172E-1119-4B4E-A7F5-EAF77A364778}.Debug|Win32.ActiveCfg = Debug|Win32
+		{5100172E-1119-4B4E-A7F5-EAF77A364778}.Debug|Win32.Build.0 = Debug|Win32
+		{5100172E-1119-4B4E-A7F5-EAF77A364778}.Debug|x64.ActiveCfg = Debug|x64
+		{5100172E-1119-4B4E-A7F5-EAF77A364778}.Debug|x64.Build.0 = Debug|x64
+		{5100172E-1119-4B4E-A7F5-EAF77A364778}.Release|Win32.ActiveCfg = Release|Win32
+		{5100172E-1119-4B4E-A7F5-EAF77A364778}.Release|Win32.Build.0 = Release|Win32
+		{5100172E-1119-4B4E-A7F5-EAF77A364778}.Release|x64.ActiveCfg = Release|x64
+		{5100172E-1119-4B4E-A7F5-EAF77A364778}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
