@@ -5,7 +5,7 @@ Test Form:
 <td valign="top" align="left"><input type="text" value="https://ingestjson-dev-dev.in.blizzardgdp.com/data" /></td>
 <tr>
 <th valign="top" align="left">MESSAGE</th>
-<td valign="top" align="left"><textarea rows="4" columns="50">
+<td valign="top" align="left"><input type="text" multiline="true" rows="4" columns="50" value=
 {
 "context":{},
 "payloads":[
@@ -19,7 +19,7 @@ Test Form:
     }
   ]
 }
-</textarea></td>
+" /></td>
 </tr>
 <tr>
 <th valign="top" align="left">ACTION</th>
